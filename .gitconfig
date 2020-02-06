@@ -1,0 +1,30 @@
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[core]
+	autocrlf = input
+	editor = vim
+	longpaths = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	acm = !git add -A && git commit -m
+	cb = checkout -b
+	cm = commit -m
+	co = checkout
+	cp = cherry-pick
+	fp = push --force
+	ls = log --color --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	mt = mergetool
+	po = push -u origin
+	pruneall = gc --prune=now
+	rbc = rebase --continue
+	rbm = !git fetch origin master && git rebase -i origin/master
+	rbgm = !git fetch origin green-master && git rebase -i origin/green-master
+	st = status
+[merge]
+	tool = kdiff3
