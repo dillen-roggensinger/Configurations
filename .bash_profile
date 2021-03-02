@@ -5,6 +5,10 @@ alias g="git"
 alias ls="ls -la"
 alias rm="rm -i"
 alias subl="sublime"
+alias tg="terragrunt"
+alias tf="terraform"
+alias tgclean="find . -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;"
+alias dc="docker-compose"
 
 # FUNCTIONS
 function pr() {
