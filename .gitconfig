@@ -13,18 +13,19 @@
 	required = true
 [alias]
 	acm = !git add -A && git commit -m
+	bls = for-each-ref --sort=-committerdate refs/heads/ --color --format='%(color:red)%(refname) %(color:blue)%(committerdate) %(color:green)%(authorname)'
 	cb = checkout -b
 	cm = commit -m
 	co = checkout
 	cp = cherry-pick
+	fo = fetch origin
 	fp = push --force
 	ls = log --color --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	mt = mergetool
 	po = push -u origin
 	pruneall = gc --prune=now
 	rbc = rebase --continue
-	rbm = !git fetch origin master && git rebase -i origin/master
-	rbgm = !git fetch origin green-master && git rebase -i origin/green-master
+	rbm = !git fetch origin main && git rebase -i origin/main
 	st = status
 [merge]
 	tool = kdiff3
