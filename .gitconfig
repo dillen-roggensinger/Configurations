@@ -13,7 +13,6 @@
 	required = true
 [alias]
 	acm = !git add -A && git commit -m
-	bls = for-each-ref --sort=-committerdate refs/heads/ --color --format='%(color:red)%(refname) %(color:blue)%(committerdate) %(color:green)%(authorname)'
 	cb = checkout -b
 	cm = commit -m
 	co = checkout
@@ -29,3 +28,6 @@
 	st = status
 [merge]
 	tool = kdiff3
+[user]
+	name = FILL THIS
+	email = FILL THIS
